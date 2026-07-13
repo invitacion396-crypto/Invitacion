@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>XV Años | América Valentina Robles Niño</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Pantalla de Bienvenida -->
+
+    <section id="bienvenida">
+
+        <div class="contenidoBienvenida">
+
+            <h3>Mis XV Años</h3>
+
+            <h1>América Valentina<br>Robles Niño</h1>
+
+            <p>
+                Hay momentos que solo suceden una vez...
+            </p>
+
+            <button id="entrar">
+                Entrar
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- Música -->
+
+    <audio id="musica" loop preload="auto">
+    <source src="audio/Cancion.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio.
+</audio>
+
+    <!-- Página Principal -->
+
+    <main id="principal">
+
+        <section class="invitacion">
+
+            <img src="img/Imagen1.jpeg">
+
+        </section>
+
+        <!-- Cuenta Regresiva -->
+
+        <section class="contador">
+
+            <h2>Faltan</h2>
+
+            <div class="tiempo">
+
+                <div>
+
+                    <span id="dias">00</span>
+
+                    <p>Días</p>
+
+                </div>
+
+                <div>
+
+                    <span id="horas">00</span>
+
+                    <p>Horas</p>
+
+                </div>
+
+                <div>
+
+                    <span id="minutos">00</span>
+
+                    <p>Minutos</p>
+
+                </div>
+
+                <div>
+
+                    <span id="segundos">00</span>
+
+                    <p>Segundos</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Botones -->
+
+        <section class="botones">
+
+    <button id="confirmar">
+
+        Confirmar Asistencia
+
+    </button>
+
+    <a href="https://maps.google.com/?q=C.+Victoria+7808-7810,+Buena+Vista,+Nuevo+Laredo,+Tamaulipas"
+        target="_blank">
+
+        📍 Ver Ubicación
+
+    </a>
+
+</section>
+
+    </main>
+
+    <!-- VENTANA EMERGENTE -->
+
+<div class="modal" id="modal">
+
+    <div class="contenidoModal">
+
+        <span id="cerrar">&times;</span>
+
+        <h2>Confirmar asistencia</h2>
+
+        <input
+            type="text"
+            id="nombre"
+            placeholder="Nombre del invitado">
+
+        <div class="radio">
+
+            <label>
+
+                <input type="radio" name="respuesta" value="si">
+
+                Sí asistiré
+
+            </label>
+
+            <label>
+
+                <input type="radio" name="respuesta" value="no">
+
+                No podré asistir
+
+            </label>
+
+        </div>
+
+        <div id="personasDiv" style="display:none;">
+
+            <input
+                type="number"
+                id="personas"
+                min="1"
+                value="1"
+                placeholder="Número de personas">
+
+        </div>
+
+        <button id="enviar">
+
+            Enviar Confirmación
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+emailjs.init({
+    publicKey: "anBc2zoGxR5ueEGJX",
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
