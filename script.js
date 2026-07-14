@@ -143,6 +143,11 @@ document.getElementById("enviar").onclick = async () => {
         return;
     }
 
+    if(respuesta.value=="si" && (personas=="" || personas<=0)){
+        alert("Selecciona el número de personas que asistirán.");
+        return;
+    }
+
     try{
 
         await emailjs.send(
